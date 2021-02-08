@@ -44,6 +44,8 @@ namespace Intacct.SDK.Functions.GlobalConsolidations
                     break;
             }
 
+            xml.WriteElement("updatesucceedingperiods", (UpdateSucceedingPeriods.Value ? "T" : "F"));
+
             xml.WriteElement("updatesucceedingperiods", UpdateSucceedingPeriods);
             xml.WriteElement("changesonly", ChangesOnly);
             xml.WriteElement("email", NotificationEmail);
